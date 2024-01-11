@@ -55,7 +55,7 @@ const createTasks = async (client) => {
     }
 
     try {
-        await sql`
+        await client.sql`
             CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
             CREATE TABLE IF NOT EXISTS task (
                 id UUID DEFAULT uuid_generate_v4(),
