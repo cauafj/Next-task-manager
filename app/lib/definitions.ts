@@ -16,5 +16,6 @@ export type task = {
     name: string,
     description: string,
     time: Date,
-    status: Status
+    status: Status,
+    userId: string
 }

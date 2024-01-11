@@ -1,4 +1,4 @@
-const data = {
+export const data = {
     users: [
         {username: 'julio bagre', password: 'juliosenha', id: 'ba928300-c902-4d9c-a41b-32b507fac840'},
         {username: 'paulo tilapia', passqord: 'paulosenha', id: '55466cbf-210c-4716-949b-18ec7bd395d7'}
