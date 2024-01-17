@@ -20,7 +20,6 @@ Choose to use SQL and postgresql because:
 ### Logic
 ![Logic model](./diagrams/logic_model_v1.png "Logic model")
 
-## Seeds.js, { sql } and { db } usability
-Seeds are js, not ts, because of the "client" usage, since it does not make sense to just define its type as "any". 
-{ db } is being used at seeds instead of just { sql } because the first options opens a connection and after closes it, while only using { sql } would create a connection for each time it was called. All SQL in seeds runs at once, so is non-sense to keep creating and closing connections using { sql }. The placeholder data file is also js because it does not need types.
+## ORM
+Initially, I would use vercel/postgres SDK to interact with the database, but, because of some limits of it, I decided to use Prisma ORM to learn about it.
 

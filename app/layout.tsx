@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Navbar from './ui/navbar'
+import { link } from './lib/definitions'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +16,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const links: link[] = [
+    {text:'Home', href: '/'},
+    {text: 'Tasks', href:'/tasks'},
+  ]
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-col bg-black p-2 h-screen`}>
+        <Navbar links={links}/>
+        <div className="grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+      </body>
     </html>
   )
 }

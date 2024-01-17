@@ -5,6 +5,11 @@ export enum Status {
     notDone = 'Not done'
 }
 
+export type link = {
+    text: string,
+    href: string
+}
+
 export type user = {
     username: string,
     password: string,

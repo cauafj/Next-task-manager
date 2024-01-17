@@ -1,4 +1,9 @@
+import TaskTable from "../ui/tasks/task-table"
 
 export default function Page() {
-    return <div></div>
+    return (
+        <main className="h-full">
+            
+        </main>
+    )
 }
