@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seeds": "node -r dotenv/config ./scripts/seeds.js"
+    "seeds": "node -r dotenv/config ./scripts/seeds.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
