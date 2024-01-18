@@ -1,10 +1,3 @@
-export enum Status {
-    notStaterd = 'Not started',
-    doing = 'Doing',
-    done = 'Done',
-    notDone = 'Not done'
-}
-
 export type link = {
     text: string,
     href: string
@@ -13,14 +6,14 @@ export type link = {
 export type user = {
     username: string,
     password: string,
-    id: string
+    id: number
 }
 
 export type task = {
-    id: string,
-    name: string,
-    description: string,
-    time: Date,
-    status: Status,
-    userId: string
+    id: number,
+    name: string | null,
+    description: string | null,
+    datetime: Date | null,
+    status: 'notStarted' | 'done' | 'notDone' | 'doing' | null,
+    userId: number
 }
